@@ -17,8 +17,8 @@ app.get('/.well-known/acme-challenge/GWLE-kNm2bQ0f43Q-jwWwGlxDumDEzWjVZ-QdXjDJik
   response.send('GWLE-kNm2bQ0f43Q-jwWwGlxDumDEzWjVZ-QdXjDJik.tRZzhjhg1nDNW1U_Ts6YvwgYDgbT27gxEsQ-V1JPB8k');
 });
 
-app.get('/.well-known/acme-challenge/d78T6SA8OQSq7Nf8nXbNTDpmd741ehSDRmjWs4V4hxM', function(request, response) {
-  response.send('d78T6SA8OQSq7Nf8nXbNTDpmd741ehSDRmjWs4V4hxM.tRZzhjhg1nDNW1U_Ts6YvwgYDgbT27gxEsQ-V1JPB8k');
+app.get('/.well-known/acme-challenge/XCQYJAmB9KlFyuKUvCFu-bAvGKrRsq5Sfj4EziEEnwQ', function(request, response) {
+  response.send('XCQYJAmB9KlFyuKUvCFu-bAvGKrRsq5Sfj4EziEEnwQ.tRZzhjhg1nDNW1U_Ts6YvwgYDgbT27gxEsQ-V1JPB8k');
 });
 
 
