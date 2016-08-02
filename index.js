@@ -19,13 +19,20 @@ var client = new pg.Client();
 app.get('/db', function(request, response) {
 	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 		if (err) throw err;
-		client.query('SELECT * FROM test_table', function(err, result) {
-			done();
+		client.query("INSERT INTO test_table (name) VALUES ('hello postgres');", function(err, result) {
 			if (err) {
 				console.error(err);
 				response.send('Error: ' + err);
 			} else {
-				response.render('pages/db', {results: result.rows});
+				client.query('SELECT * FROM test_table', function(err, result) {
+					done();
+					if (err) {
+						console.error(err);
+						response.send('Error: ' + err);
+					} else {
+						response.render('pages/db', {results: result.rows});
+					}
+				});
 			}
 		});
 	});
